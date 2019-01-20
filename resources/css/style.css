@@ -1,0 +1,23 @@
+/*
+Body padding required
+The fixed navbar will overlay your other content,
+unless you add padding to the top of the <body>.
+Try out your own values or use our snippet below.
+Tip: By default, the navbar is 50px high.
+Make sure to include this after the core Bootstrap CSS.
+  --This is for the NavBar element w <ul> <links>*/
+body { padding-top: 70px; }
+
+.navbar-default .navbar-nav .active a {
+
+}
+
+.navbar-default .navbar-nav .active a:hover {
+
+}
+
+.jumbotron-bike {
+  background-image: image(resources/images/images/jumbotron-bike.jpg);
+}
+  /*url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-8/Jumpstart/resources/images/jumbotron-bike.jpg");
+}
