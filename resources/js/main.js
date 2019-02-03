@@ -1,25 +1,25 @@
-//jQuery cdn//
-//<script
-//  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  //integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-//  crossorigin="anonymous"></script>
+$(document).ready(function(){
+ $('.carousel').slick({
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   autoplay: true,
+   autoplaySpeed: 4000,
+   draggable: false,
+   pauseOnFocuse: false,
+   pauseOnHover: false,
+});
 
-  //slick cdn//
-//  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-//my custom javascript//
-//resources/js/main.js
-//
-
-// Activate Carousel
-//$("#carouselControls").carousel();
-
-// Enable Carousel Indicators
-//$(".item").click(function(){
-//  $("#carouselControls").carousel(1);
-//});
-
-// Enable Carousel Controls
-//$(".left").click(function(){
-//  $("#carouselControls").carousel("prev");
-//});
+var lastScrollTop = 0;
+  $(window).scroll(function(){
+    var scrollTop = $(this).scrollTop();
+    if (scrollTop - lastScrollTop > 50){
+      var navHeight = $('.navbar').css('height');
+      $('.navbar').animate({top: '-' + navHeight}, 150);
+      lastScrollTop = scrollTop;
+    } else if (lastScrollTop - scrollTop > 50) {
+      $('.navbar').animate({top: '0px'}, 150);
+      lastScrollTop = scrollTop;
+    }
+  });
+});
